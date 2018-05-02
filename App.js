@@ -5,22 +5,23 @@
  */
 
 import React, { Component } from 'react';
-import { AppRegistry, Image} from 'react-native';
+import { AppRegistry, Text, View, Image} from 'react-native';
 
-class DisplayImage extends Component {
-
+class Salutation extends Component {
   render() {
-
-    let picture = {
-      uri: 'https://img.elo7.com.br/product/main/1B8637C/painel-bob-esponja-2-00-x-1-00m-decorativos-para-festa.jpg'
-    };
-
     return (
-      <Image source={picture} style={{width:193, height:110}} />
+      <Text>Hello {this.props.name} ! </Text>
     );
   }
 }
 
-//AppRegistry.registerComponent('DisplayImage', () => DisplayImage);
-
-export default DisplayImage;
+class GreatSalutation extends Component {
+  render() {
+    return (
+      <View style={{alignItems:'center'}}>
+        <Salutation name='Salutation1' />
+        <Salutation name='Salutation2' />
+      </View>
+    );
+  }
+}
