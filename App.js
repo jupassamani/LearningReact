@@ -6,5 +6,5 @@
 
 
 import React, {Component} from 'react';
-import { AppRegistry, View } from 'react-native';
+import { AppRegistry, View, Text, TextInput } from 'react-native';
 
